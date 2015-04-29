@@ -1,0 +1,36 @@
+<!-- Created by Clarence Johnson and Ryan Davis -->
+
+<header><center><%= image_tag "hearthstone_logo.png"%></center></header>
+
+<center>
+
+<div class="app-description">
+	<h1>CARD OPENER</h1>
+	Use this app to simulate the experience of opening up a pack of Hearthstone cards!
+</div>
+
+<!-- <%= image_tag "Hearthstone_Golden_Cards/Common/HSCard11.gif"%> -->
+
+
+<%= button_to "Open Pack", :method=> "openPack" %>
+
+
+<table>
+	<thead>
+		<tr>
+
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @allCards.each do |card| %>
+			<tr>
+				<td> <%= card.type %> </td>
+				<td> <%= image_tag "#{card.image}" %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</center>
+
+	
